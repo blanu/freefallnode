@@ -1,0 +1,31 @@
+<!-- Generated from app.yaml. Do not edit. -->
+<web-app version='2.5' xmlns='http://java.sun.com/xml/ns/javaee'>
+  <servlet>
+    <servlet-name>ringo</servlet-name>
+    <servlet-class>freefall.node.JsgiServlet</servlet-class>
+    <init-param>
+      <param-name>app</param-name>
+      <param-value>app</param-value>
+    </init-param>
+    <init-param>
+      <param-name>ringo-home</param-name>
+      <param-value>/</param-value>
+    </init-param>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>main</param-value>
+    </init-param>
+    <init-param>
+      <param-name>module-path</param-name>
+      <param-value>src</param-value>
+    </init-param>
+    <init-param>
+      <param-name>optlevel</param-name>
+      <param-value>-1</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ringo</servlet-name>
+    <url-pattern>/*</url-pattern>
+  </servlet-mapping>
+</web-app>

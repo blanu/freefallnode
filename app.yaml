@@ -1,0 +1,18 @@
+application: freefallnode
+version: 1
+runtime: java
+public_root: /root
+
+resource_files:
+  - exclude: README.md
+
+handlers:
+  - url: /*
+    servlet: freefall.node.JsgiServlet
+    name: ringo
+    init_params:
+        module-path: js
+        config: main
+        app: app
+        optlevel: -1
+        ringo-home: /
