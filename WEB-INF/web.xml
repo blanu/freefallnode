@@ -17,7 +17,7 @@
     </init-param>
     <init-param>
       <param-name>module-path</param-name>
-      <param-value>src</param-value>
+      <param-value>js</param-value>
     </init-param>
     <init-param>
       <param-name>optlevel</param-name>
