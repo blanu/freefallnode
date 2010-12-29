@@ -20,8 +20,8 @@ import org.eclipse.jetty.continuation.ContinuationSupport;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.RhinoException;
 import org.ringojs.engine.SyntaxError;
-import org.ringojs.tools.RingoConfiguration;
 import org.ringojs.tools.RingoRunner;
+import org.ringojs.tools.RingoConfiguration;
 import org.ringojs.repository.Repository;
 import org.ringojs.repository.FileRepository;
 import org.ringojs.repository.WebappRepository;
@@ -77,7 +77,7 @@ public class JsgiServlet extends HttpServlet {
             boolean verbose = getBooleanParameter(config, "verbose", false);
             boolean legacyMode = getBooleanParameter(config, "legacy-mode", false);
 
-            Repository home = new WebappRepository(config.getServletContext(), ringoHome);
+						Repository home = new WebappRepository(config.getServletContext(), ringoHome);
             try {
                 if (!home.exists()) {
                     home = new FileRepository(ringoHome);
@@ -86,7 +86,7 @@ public class JsgiServlet extends HttpServlet {
                 }
                 // Use ',' as platform agnostic path separator
                 String[] paths = StringUtils.split(modulePath, ",");
-                RingoConfiguration ringoConfig = new RingoConfiguration(home, paths, "modules");
+                RingoConfiguration ringoConfig = new WebConfiguration(home, paths, "modules");
                 ringoConfig.setDebug(debug);
                 ringoConfig.setVerbose(verbose);
                 ringoConfig.setParentProtoProperties(legacyMode);
@@ -133,7 +133,6 @@ public class JsgiServlet extends HttpServlet {
         } catch (Exception x) {
             try {
                 renderError(x, response);
-                log.debug('engine: '+engine);
                 RingoRunner.reportError(x, System.err, engine.getConfig().isVerbose());
             } catch (Exception failed) {
                 // custom error reporting failed, rethrow original exception for default handling

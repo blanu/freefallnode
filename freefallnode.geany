@@ -1,0 +1,34 @@
+
+[indentation]
+indent_width=2
+indent_type=0
+indent_hard_tab_width=8
+detect_indent=false
+indent_mode=2
+
+[project]
+name=freefallnode
+base_path=/home/brandon/freefallnode
+description=
+
+[long line marker]
+long_line_behaviour=1
+long_line_column=72
+
+[files]
+current_page=1
+FILE_NAME_0=5416;Java;0;16;1;1;0;/home/brandon/freefallnode/src/freefall/node/JsgiServlet.java;0
+FILE_NAME_1=5248;Java;0;16;0;1;0;/home/brandon/freefallnode/src/freefall/node/WebRepository.java;0
+FILE_NAME_2=1383;Java;0;16;0;1;0;/home/brandon/freefallnode/src/freefall/node/WebResource.java;0
+
+[build-menu]
+JavaFT_00_LB=_Compile
+JavaFT_00_CM=ant compile
+JavaFT_00_WD=/home/brandon/freefallnode
+filetypes=Java;
+JavaFT_01_LB=Make Jar
+JavaFT_01_CM=ant jar
+JavaFT_01_WD=/home/brandon/freefallnode
+EX_00_LB=Dev Server
+EX_00_CM=~/appengine-java-sdk-1.4.0/bin/dev_appserver.sh .
+EX_00_WD=/home/brandon/freefallnode
