@@ -41,7 +41,6 @@ import java.util.logging.Logger;
 
 public class JsgiServlet extends HttpServlet {
     private static final Logger log = Logger.getLogger(JsgiServlet.class.getName());
-    String module;
     Object function;
     RhinoEngine engine;
     JsgiRequest requestProto;
@@ -61,12 +60,6 @@ public class JsgiServlet extends HttpServlet {
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
-
-        // don't overwrite function if it was set in constructor
-        if (function == null) {
-            module = getStringParameter(config, "config", "config");
-            function = getStringParameter(config, "app", "app");
-        }
 
         if (engine == null) {
             String ringoHome = getStringParameter(config, "ringo-home", "/WEB-INF");
@@ -125,6 +118,26 @@ public class JsgiServlet extends HttpServlet {
         } catch (Exception ignore) {
             // continuation may not be set up even if class is availble - ignore
         }
+
+        String module=null;
+			  String path=request.getPathInfo();
+			  if(path.startsWith("/"))
+			  {
+					path=path.substring(1);
+				}
+			  log.info("path: "+path);
+			  
+			  if(path.equals("/"))
+			  {
+          module = "main.js";
+        }
+        else
+        {
+					module=path;
+				}
+				
+        String function = "app";
+        
         Context cx = engine.getContextFactory().enterContext();
         try {
             JsgiRequest req = new JsgiRequest(cx, request, response, requestProto, engine.getScope(), this);
