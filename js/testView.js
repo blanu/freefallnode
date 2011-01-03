@@ -8,11 +8,12 @@ exports.app = function (request) {
 exports.GET = function (request) {
     logging.info("view get...");
     var params = new Request(request).params
+    logging.info("params: "+params);
 
     return {
         status: 200,
         headers: {"Content-Type": "application/json"},
-        body: ["[1,2,3,7,8,9]"]
+        body: ["{\"key\": \"test\", \"value\": "+JSON.stringify(params)+"}"]
     };
 }
 
@@ -23,6 +24,6 @@ exports.POST = function (request) {
     return {
         status: 200,
         headers: {"Content-Type": "application/json"},
-        body: ["[1,2,3,7,8,9]"]
+        body: ["{\"key\": \"test\", \"value\": "+JSON.stringify(params)+"}"]
     };
 }
