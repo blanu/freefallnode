@@ -6,7 +6,7 @@ exports.app = function (request) {
 }
 
 exports.GET = function (request) {
-    logging.debug("view get...");
+    logging.info("view get...");
     var params = new Request(request).params
 
     return {
@@ -17,7 +17,7 @@ exports.GET = function (request) {
 }
 
 exports.POST = function (request) {
-    logging.debug("view post...");
+    logging.info("view post...");
     var params = new Request(request).params
 
     return {
