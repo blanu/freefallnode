@@ -17,7 +17,7 @@
     </init-param>
     <init-param>
       <param-name>module-path</param-name>
-      <param-value>https://github.com/blanu/freefallnode/raw/master/js/</param-value>
+      <param-value>https://github.com/blanu/embidden/raw/master/views/</param-value>
     </init-param>
     <init-param>
       <param-name>optlevel</param-name>
