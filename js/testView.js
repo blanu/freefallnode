@@ -8,9 +8,7 @@ exports.app = function (request) {
 exports.GET = function (request) {
     logging.info("view get...");
     var params = new Request(request).params
-    logging.info("params: "+params);
-    logging.info("JSON.parse: "+JSON.parse);
-    logging.info("JSON.stringify: "+JSON.stringify);
+    logging.info("params: "+JSON.stringify(params));
 
     return {
         status: 200,
@@ -22,9 +20,7 @@ exports.GET = function (request) {
 exports.POST = function (request) {
     logging.info("view post...");
     var params = new Request(request).params
-    logging.info("params: "+params);
-    logging.info("JSON.parse: "+JSON.parse);
-    logging.info("JSON.stringify: "+JSON.stringify);
+    logging.info("params: "+JSON.stringify(params));
 
     return {
         status: 200,
