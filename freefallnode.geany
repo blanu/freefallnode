@@ -16,10 +16,13 @@ long_line_behaviour=1
 long_line_column=72
 
 [files]
-current_page=1
-FILE_NAME_0=5416;Java;0;16;1;1;0;/home/brandon/freefallnode/src/freefall/node/JsgiServlet.java;0
-FILE_NAME_1=5248;Java;0;16;0;1;0;/home/brandon/freefallnode/src/freefall/node/WebRepository.java;0
-FILE_NAME_2=1383;Java;0;16;0;1;0;/home/brandon/freefallnode/src/freefall/node/WebResource.java;0
+current_page=2
+FILE_NAME_0=4922;Java;0;16;1;1;0;/home/brandon/freefallnode/src/freefall/node/JsgiServlet.java;0
+FILE_NAME_1=2399;Java;0;16;0;1;0;/home/brandon/freefallnode/src/freefall/node/WebRepository.java;0
+FILE_NAME_2=2184;Java;0;16;0;1;0;/home/brandon/freefallnode/src/freefall/node/WebResource.java;0
+FILE_NAME_3=3154;Java;0;16;0;1;0;/home/brandon/freefallnode/src/freefall/node/WebConfiguration.java;0
+FILE_NAME_4=11919;Java;0;16;0;1;0;/home/brandon/ringojs/src/org/ringojs/engine/RhinoEngine.java;0
+FILE_NAME_5=5108;Java;0;16;0;1;0;/home/brandon/ringojs/src/org/ringojs/tools/RingoConfiguration.java;0
 
 [build-menu]
 JavaFT_00_LB=_Compile
@@ -32,3 +35,6 @@ JavaFT_01_WD=/home/brandon/freefallnode
 EX_00_LB=Dev Server
 EX_00_CM=~/appengine-java-sdk-1.4.0/bin/dev_appserver.sh .
 EX_00_WD=/home/brandon/freefallnode
+EX_01_LB=Update
+EX_01_CM=~/appengine-java-sdk-1.4.0/bin/appcfg.sh update .
+EX_01_WD=/home/brandon/freefallnode

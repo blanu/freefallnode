@@ -46,10 +46,8 @@ public class WebResource extends AbstractResource
         repository=null;
         String s=url.toString();
         int lastSlash=s.lastIndexOf('/');
-//        path = s.substring(0, lastSlash);
+        path = s.substring(0, lastSlash);
         name = s.substring(lastSlash, s.length());
-        path="PATH";
-        name="NAME";
 
         // base name is short name with extension cut off
         int lastDot = name.lastIndexOf(".");
